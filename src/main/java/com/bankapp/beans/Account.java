@@ -1,10 +1,20 @@
 package com.bankapp.beans;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+
+@MappedSuperclass
+
 public class Account
 {
+	@Column(name = "fullName")
 	private String fullName;
+	@Column(name = "username")
 	private String username;
+	@Column(name = "password")
 	private String password;
+	@Column(name = "salt")
 	private String salt;
 
 	public Account(){}
