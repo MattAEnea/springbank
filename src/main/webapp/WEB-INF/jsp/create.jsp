@@ -11,13 +11,13 @@
 </head>
 <body>
 
-	<form method="post" action="save">
+	<form method="post" action="/save">
 		<b>Enter Full Name: </b>
-		<input type="text" name="fullName"/><br>
+		<input type="text" name="fullName" id="fullName"/><br>
 		<b>Enter Username: </b>
-		<input type="text" name="username"/><br>
+		<input type="text" name="username" id="username"/><br>
 		<b>Enter Password: </b>
-		<input type="password" name="password"/><br>
+		<input type="password" name="password" id="password"/><br>
 		
 		<input type="submit" value="save"/>
 	</form>
