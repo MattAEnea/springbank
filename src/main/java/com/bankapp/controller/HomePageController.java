@@ -12,10 +12,22 @@ public class HomePageController
 		return "forward:/static/index.html";
 	}
 	
-	@GetMapping("form")
-	public String showForm()
+	@GetMapping("/create")
+	public String showCreate()
 	{
-		return "form";
+		return "create";
+	}
+	
+	@GetMapping("/login")
+	public String showLogin()
+	{
+		return "login";
+	}
+	
+	@GetMapping("/err")
+	public String showErr()
+	{
+		return "err";
 	}
 	
 }
