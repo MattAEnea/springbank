@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bankapp.beans.Customer;
+import com.bankapp.service.AuthService;
 import com.bankapp.service.CustomerService;
 import com.bankapp.service.PasswordService;
 
@@ -15,6 +16,9 @@ public class CreateAccountController
 {
 	@Autowired
 	CustomerService customerService;
+	
+	@Autowired
+	AuthService authService;
 	
 	@PostMapping("/save")
 	public String createAccount(@RequestParam String fullName, 
@@ -31,8 +35,7 @@ public class CreateAccountController
 		password = null;
 		customerService.saveCustomer(customer);
 		model.addAttribute("newAccount", customer);
-		customer = null;
-		return "account";
+		return "success";
 	}
 	
 }
